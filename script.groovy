@@ -24,7 +24,6 @@ def increment_frontend_version() {
 def buildimage() {
     echo "Building the docker image..."
     withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-     // sh "sudo docker build -t shadibadria/fullstack:backend-${BACKEND_IMAGE_NAME} backend"
       sh "sudo docker build -f  frontend/Dockerfile-prod -t shadibadria/fullstack:frontend-${FRONTEND_IMAGE_NAME} ."
       sh "sudo docker build  -t  shadibadria/fullstack:backend-${BACKEND_IMAGE_NAME} ./backend "
       sh "echo $PASSWORD | sudo docker login -u $USERNAME --password-stdin"
