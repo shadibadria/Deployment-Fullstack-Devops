@@ -1,6 +1,12 @@
 
-# Devops Project a full stack mern app deployment using build server (jenkins) , bash , production server(ec2) , artifact(nexus) , docker .
+# Devops Project 
 
+---------------------
+Technologies
+---------------------
+```
+Jenkins , Docker , Bash , AWS , Nexus 
+```
 
 # Docker compose 
 ---------------------
