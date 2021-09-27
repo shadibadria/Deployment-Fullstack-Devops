@@ -67,7 +67,6 @@ def deploy_frontend_app() {
 def deploy_backend_app() {
       echo "Deploying the application..."
     withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-     // sh "echo $PASSWORD | sudo docker login -u $USERNAME --password-stdin"
       def backend_image = "shadibadria/fullstack:backend-${BACKEND_IMAGE_NAME}"
       def script = " bash ./backend_server.sh  ${backend_image}"
       def ec2_instance = "ec2-user@54.89.203.91"
