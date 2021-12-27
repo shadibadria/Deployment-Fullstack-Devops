@@ -8,6 +8,38 @@ Technologies
 Jenkins , Docker , Bash , AWS , Nexus 
 ```
 
+# Steps
+
+---------------------
+Technologies
+---------------------
+```
+installion : 
+1) docker
+2) Jenkins as container 
+3) nexus as container
+4) kubernets
+
+To do :
+1) increment version front+back
+2) create docker images and deploy to nexus
+3) update SCM 
+4) deploy to kubernetes (use ec2 or local)
+
+
+```
+
+# Installion 
+
+---------------------
+Technologies
+---------------------
+```
+Jenkins  - docker run -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts-jdk11
+nexus - docker run -d -p 8081:8081 --name nexus sonatype/nexus3
+
+
+```
 # Docker compose 
 ---------------------
  Docker Compose 

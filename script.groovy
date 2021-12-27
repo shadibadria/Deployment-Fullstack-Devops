@@ -5,7 +5,7 @@
 //increment backend version
 def increment_backend_version() {
     echo 'incrementing backend app version...'
-    sh "npm version patch > backend"
+    sh "npm version patch >> backend.txt"
     def version=readFile('backend').trim()
     echo "${version} , ${BUILD_NUMBER}"
     env.BACKEND_IMAGE_NAME = "$version-$BUILD_NUMBER"
@@ -14,7 +14,7 @@ def increment_backend_version() {
 //increment frontend version
 def increment_frontend_version() {
     echo 'incrementing frontend app version...'
-    sh "npm version patch > front_end";
+    sh "npm version patch >> front_end";
     def version=readFile('front_end').trim()
     env.FRONTEND_IMAGE_NAME = "$version-$BUILD_NUMBER"
     echo "${FRONTEND_IMAGE_NAME}"
@@ -45,6 +45,11 @@ def git_deploy(){
 }
 
 }
+// deploy to nexus
+def deploy_to_nexus_docker(){
+
+}
+
 
 //deploy frontend app to production
 def deploy_frontend_app() {
@@ -63,6 +68,7 @@ def deploy_frontend_app() {
       
     }
 }
+
 //deploy backend app to production
 def deploy_backend_app() {
       echo "Deploying the application..."
@@ -81,4 +87,6 @@ def deploy_backend_app() {
       
     }
 }
+
+
     return this

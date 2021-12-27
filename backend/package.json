@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "publishConfig": {
     "registry": "http://137.184.142.241:8081/repository/npm-internal/"
   },
-  "devDependencies":{
+  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }
